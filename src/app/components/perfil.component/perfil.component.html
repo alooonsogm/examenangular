@@ -1,0 +1,29 @@
+@if (token == "") {
+    {{llevarFormulario()}}
+}@else {
+    @if (usuario) {
+        <div>
+            <h1>Mi perfil</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID Usuario</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{usuario.idUsuario}}</td>
+                        <td>{{usuario.nombre}}</td>
+                        <td>{{usuario.email}}</td>
+                        <td>{{usuario.pass}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <button class="btn btn-danger" (click)="cerrarSesion()">Cerrar sesión</button>
+    }
+}

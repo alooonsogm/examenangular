@@ -1,0 +1,10 @@
+<div>
+    <h1>Login</h1>
+    <form #loginForm="ngForm">
+        <label>Email: </label>
+        <input type="text" name="cajaEmail" #cajaEmail class="form-control">
+        <label>Password: </label>
+        <input type="text" name="cajaPassword" #cajaPassword class="form-control">
+        <button class="btn btn-dark" (click)="loginEmpleados()">Login</button>
+    </form>
+</div>

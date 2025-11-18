@@ -1,0 +1,18 @@
+@if (token == "") {
+    {{llevarFormulario()}}
+}@else {
+    @if (cubos) {
+        <div>
+            <h1>Hacer pedido</h1>
+            <form #compraForm="ngForm">
+                <label>Cubo: </label>
+                <select name="selectcubo" #selectcubo class="form-control">
+                    @for (cubo of cubos; track cubo) {
+                        <option value={{cubo.idCubo}}>{{cubo.nombre}}</option>
+                    }
+                </select>
+                <button class="btn btn-dark" (click)="hacerElPedido()">Comprar cubo</button>
+            </form>
+        </div>
+    }
+}

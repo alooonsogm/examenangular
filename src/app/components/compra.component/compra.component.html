@@ -1,0 +1,29 @@
+@if (token == "") {
+    {{llevarFormulario()}}
+}@else {
+    @if (compras) {
+        <div>
+            <h1>Compras de perfil</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID Cubo</th>
+                        <th>ID Pedido</th>
+                        <th>ID Usuario</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (compra of compras; track compra) {
+                        <tr>
+                            <td>{{compra.idCubo}}</td>
+                            <td>{{compra.idPedido}}</td>
+                            <td>{{compra.idUsuario}}</td>
+                            <td>{{compra.fechaPedido}}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+}
